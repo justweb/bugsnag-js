@@ -42,7 +42,7 @@ module.exports = {
       // Distinguish from local use
       const ciIndicator = (process.env.BUILDKITE ? 'ci-' : '')
 
-      return `${lernaVersion}-${ciIndicator}${branchName}.${commitId}`
+      return `${lernaVersion}-${ciIndicator}${branchName}.v${commitId}`
     }
   }
 }
