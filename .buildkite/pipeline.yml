@@ -106,7 +106,7 @@ steps:
     if: build.env("BUILD_RN_WITH_LATEST_NATIVES") != "true"
     timeout_in_minutes: 35
     agents:
-      queue: 'server-test'
+      queue: 'opensource-mac-aws-sam'
     commands:
       # force the NPM registry as the default on CI is artifactory, which can't
       # currently install from our lockfile
