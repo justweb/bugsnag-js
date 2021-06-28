@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "rn0_64.app"
-               BlueprintName = "rn0_64"
-               ReferencedContainer = "container:rn0_64.xcodeproj">
+               BuildableName = "rn0_64_hermes.app"
+               BlueprintName = "rn0_64_hermes"
+               ReferencedContainer = "container:rn0_64_hermes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "rn0_64Tests.xctest"
-               BlueprintName = "rn0_64Tests"
-               ReferencedContainer = "container:rn0_64.xcodeproj">
+               BuildableName = "rn0_64_hermesTests.xctest"
+               BlueprintName = "rn0_64_hermesTests"
+               ReferencedContainer = "container:rn0_64_hermes.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "rn0_64.app"
-            BlueprintName = "rn0_64"
-            ReferencedContainer = "container:rn0_64.xcodeproj">
+            BuildableName = "rn0_64_hermes.app"
+            BlueprintName = "rn0_64_hermes"
+            ReferencedContainer = "container:rn0_64_hermes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "rn0_64.app"
-            BlueprintName = "rn0_64"
-            ReferencedContainer = "container:rn0_64.xcodeproj">
+            BuildableName = "rn0_64_hermes.app"
+            BlueprintName = "rn0_64_hermes"
+            ReferencedContainer = "container:rn0_64_hermes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

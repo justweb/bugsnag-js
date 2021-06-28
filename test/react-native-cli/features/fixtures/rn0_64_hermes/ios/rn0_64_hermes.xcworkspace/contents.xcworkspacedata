@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:rn0_64.xcodeproj">
+      location = "group:/Users/steve/git/bugsnag-js/test/react-native-cli/features/fixtures/rn0_64_hermes/ios/rn0_64_hermes.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
