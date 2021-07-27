@@ -2,7 +2,7 @@ const Bugsnag = require('@bugsnag/electron')
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 
-Bugsnag.start('YOUR_API_KEY')
+Bugsnag.start('0c73a426aa15abc6ccecdfa5ff6dd2c0')
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {

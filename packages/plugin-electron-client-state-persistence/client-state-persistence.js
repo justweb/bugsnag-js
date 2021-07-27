@@ -1,7 +1,13 @@
 module.exports = {
   NativeClient: require('bindings')('bugsnag_pecsp_bindings'),
-  plugin: (NativeClient) => ({
+  plugin: (NativeClient, filestore, appRunMetadata) => ({
     load: (client) => {
+      NativeClient.install(
+        filestore.getEventInfoPath(appRunMetadata.bugsnag_crash_id),
+        filestore.getPaths().lastRunInfo,
+        client._config.maxBreadcrumbs
+      )
+
       client.addOnBreadcrumb(breadcrumb => {
         try {
           NativeClient.leaveBreadcrumb(breadcrumb)
