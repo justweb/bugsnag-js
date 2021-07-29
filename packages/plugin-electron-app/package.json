@@ -22,7 +22,9 @@
   ],
   "scripts": {
     "build": "node-gyp configure build",
-    "generate-compile-commands": "node-gyp configure --release -- -f gyp.generator.compile_commands_json.py; mv Release/compile_commands.json .; rm -rf Debug Release"
+    "generate-compile-commands": "node-gyp configure --release -- -f gyp.generator.compile_commands_json.py; mv Release/compile_commands.json .; rm -rf Debug Release",
+    "electron:prebuild": "prebuild -r electron -t 11.0.0 --force --strip --verbose",
+    "electron:prebuild:upload": "prebuild --upload-all"
   },
   "devDependencies": {
     "@bugsnag/core": "^7.11.0",

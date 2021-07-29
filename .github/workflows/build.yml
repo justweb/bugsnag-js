@@ -1,0 +1,38 @@
+name: Build
+on:
+  push:
+    tags:
+    - 'v[1-9]+.[0-9]+.[0-9]+'
+    - 'force-build'
+jobs:
+  test:
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      matrix:
+        node-version: [14.x]
+        config:
+          - { os: macos-latest, arch: x64 }
+          - { os: ubuntu-latest, arch: x64 }
+          - { os: windows-latest, arch: x64 }
+          - { os: windows-latest, arch: ia32 }
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    # https://github.com/nodejs/node-gyp/issues/1663#issuecomment-535049449
+    - name: patch node gyp on windows to support Visual Studio 2019
+      if: matrix.os == 'windows-latest'
+      shell: powershell
+      run: |
+        npm install --global node-gyp@latest
+        npm prefix -g | % {npm config set node_gyp "$_\node_modules\node-gyp\bin\node-gyp.js"}
+    - name: upgrade npm
+      run: npm install -g npm
+    - name: npm install
+      run: npm install
+    - name: npm run electron:prebuild
+      run: npm run electron:prebuild
+      env:
+        prebuild_upload: ${{ secrets.GH_TOKEN }}
